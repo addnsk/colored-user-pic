@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as React from "react";
+import { render } from "react-dom";
+import { ColoredUserPic } from "./component";
 
-ReactDOM.render(
+render(
   <React.StrictMode>
-    <App />
+    <ColoredUserPic src="./avatar.png" />
+    <ColoredUserPic
+      src="./avatar.png"
+      backgroundSolor="white"
+      colors={["red", "orange"]}
+      hoverColors={["orange", "red"]}
+    />
+    <ColoredUserPic src="./avatar.png" size={200} margin={30} colorWidth={30} />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
